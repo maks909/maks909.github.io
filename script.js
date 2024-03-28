@@ -5,8 +5,8 @@ tg.expand();
 tg.MainButton.text = "Changed Text";
 tg.MainButton.setText("ChangedText1");
 tg.MainButton.textColor = "#F55353";
-tg.MainButton.color = "#143F6B";
-tg.MainButton.setParams({"color": "#143F6B"});
+tg.MainButton.color = "#FF8800";
+tg.MainButton.setParams({"color": "#FF8800"});
 tg.MainButton.show();
 
 
