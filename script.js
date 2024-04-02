@@ -8,7 +8,7 @@ tg.MainButton.textColor = "000000";
 tg.MainButton.color = "#FF8800";
 tg.MainButton.setParams({"color": "#FF8800"});
 tg.MainButton.show();
-
+tg.MainButton.enable()
 
 //products
 let product_box = document.getElementById("Box");
