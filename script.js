@@ -82,12 +82,13 @@ minus_button.addEventListener("click", function(){
 });
 plus_button.addEventListener("click", function(){
     tg.MainButton.enable();
+    console.log("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
     quantity[key] += 1;
     console.log(quantity[key]);
     console.log(key);
     quantity_text.innerHTML = quantity[key].toString() + "x";
     price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-    console.log("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
+    
 });
 tg.onEvent("mainButtonClicked", function(){
     console.log("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
