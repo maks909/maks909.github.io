@@ -27,7 +27,7 @@ let quantity_text = document.getElementById("quantity");
 
 let price = 0;
 
-let quantity = {
+var quantity = {
     "Box": 0,
     "Octopus": 0,
     "Vase": 0,
