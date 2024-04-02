@@ -87,6 +87,6 @@ plus_button.addEventListener("click", function(){
     quantity_text.innerHTML = quantity[key].toString() + "x";
     price_text.innerHTML = (quantity[key]*price).toString() + "zł";
 });
-window.Telegram.Webapp.onEvent("mainButtonClicked", function(){
+tg.onEvent("mainButtonClicked", function(){
     tg.sendData("test_DATA");//quantity);
 });
