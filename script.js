@@ -89,5 +89,5 @@ plus_button.addEventListener("click", function(){
     price_text.innerHTML = (quantity[key]*price).toString() + "zł";
 });
 tg.onEvent("mainButtonClicked", function(){
-    tg.sendData(quantity.toString());
+    tg.sendData("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
 });
