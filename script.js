@@ -6,7 +6,7 @@ tg.MainButton.text = "Changed Text";
 tg.MainButton.setText("ChangedText1");
 tg.MainButton.textColor = "#F55353";
 tg.MainButton.color = "#FF8800";
-tg.MainButton.setParams({"color": "#FF8800"});
+tg.MainButton.setParams({"color": "black"});
 tg.MainButton.show();
 
 
@@ -87,3 +87,6 @@ plus_button.addEventListener("click", function(){
     quantity_text.innerHTML = quantity[key].toString() + "x";
     price_text.innerHTML = (quantity[key]*price).toString() + "zł";
 })
+Telegram.Webapp.onEvent("mainButtonClicked", function(){
+    tg.sendData(quantity);
+});
