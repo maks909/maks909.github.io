@@ -33,7 +33,7 @@ var quantity = {
     "Vase": 0,
     "Benchy": 0
 };
-console.log("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
+console.log(`Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}`);
 let key = "";
 
 product_benchy.addEventListener("click", function(){
@@ -83,7 +83,7 @@ minus_button.addEventListener("click", function(){
 });
 plus_button.addEventListener("click", function(){
     tg.MainButton.enable();
-    console.log("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
+    console.log(`Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}`);
     quantity[key] += 1;
     console.log(quantity[key]);
     console.log(key);
@@ -92,6 +92,6 @@ plus_button.addEventListener("click", function(){
     
 });
 tg.onEvent("mainButtonClicked", function(){
-    console.log("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
-    tg.sendData("Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}");
+    console.log(`Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}`);
+    tg.sendData(`Box: ${quantity['Box']}, Octopus: ${quantity['Octopus']}, Vase: ${quantity['Vase']}, Benchy: ${quantity['Benchy']}`);
 });
