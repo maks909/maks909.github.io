@@ -81,7 +81,7 @@ minus_button.addEventListener("click", function(){
     }
 });
 plus_button.addEventListener("click", function(){
-    tg.MainButton.eneble()
+    tg.MainButton.enable()
     quantity[key] += 1;
     console.log(quantity[key]);
     console.log(key);
