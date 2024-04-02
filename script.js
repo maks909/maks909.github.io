@@ -79,14 +79,14 @@ minus_button.addEventListener("click", function(){
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
     }
-})
+});
 plus_button.addEventListener("click", function(){
     quantity[key] += 1;
     console.log(quantity[key]);
     console.log(key);
     quantity_text.innerHTML = quantity[key].toString() + "x";
     price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-})
+});
 Telegram.Webapp.onEvent("mainButtonClicked", function(){
     tg.sendData(quantity);
 });
