@@ -59,6 +59,9 @@ p#price{
     background-color: #FEFFBE;
     margin-right: 25px;
 }
+p#total_price{
+    background-color: #ffefbe;
+}
 .sround{
     margin: -1.5px;
     border-style: hidden;

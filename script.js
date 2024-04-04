@@ -23,9 +23,11 @@ let plus_button = document.getElementById("plus");
 //text information 
 let name_text = document.getElementById("name");
 let price_text = document.getElementById("price");
+let total_text = document.getElementById("total_price")
 let quantity_text = document.getElementById("quantity");
 
 let price = 0;
+let total = 0;
 
 var quantity = {
     "Box": 0,
@@ -78,6 +80,8 @@ minus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
+        tatal += (quantity[key]*price).toString();
+        total_text.innerHTML = total.toString();
     }
 });
 plus_button.addEventListener("click", function(){
@@ -88,6 +92,8 @@ plus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
+        tatal += (quantity[key]*price).toString();
+        total_text.innerHTML = total.toString();
     }
 });
 tg.onEvent("mainButtonClicked", function(){
