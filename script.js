@@ -72,7 +72,7 @@ product_vase.addEventListener("click", function(){
 });
 
 minus_button.addEventListener("click", function(){
-    if (quantity[key] >0){
+    if (quantity[key] >0 && price > 0){
         quantity[key] -= 1;
         console.log(quantity[key]);
         console.log(key);
@@ -81,13 +81,14 @@ minus_button.addEventListener("click", function(){
     }
 });
 plus_button.addEventListener("click", function(){
-    tg.MainButton.enable();
-    quantity[key] += 1;
-    console.log(quantity[key]);
-    console.log(key);
-    quantity_text.innerHTML = quantity[key].toString() + "x";
-    price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-    
+    if (price > 0){   
+        tg.MainButton.enable();
+        quantity[key] += 1;
+        console.log(quantity[key]);
+        console.log(key);
+        quantity_text.innerHTML = quantity[key].toString() + "x";
+        price_text.innerHTML = (quantity[key]*price).toString() + "zł";
+    }
 });
 tg.onEvent("mainButtonClicked", function(){
     let string = ""
