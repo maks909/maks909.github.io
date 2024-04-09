@@ -27,7 +27,7 @@ let total_text = document.getElementById("total_price")
 let quantity_text = document.getElementById("quantity");
 
 let price = 0;
-let total = 0;
+
 
 var quantity = {
     "Box": 0,
@@ -36,6 +36,18 @@ var quantity = {
     "Benchy": 0
 };
 let key = "";
+
+function count_total(){
+    let prices = {"Box": 10,
+                "Octopus": 13,
+                "Vase": 23,
+                "Benchy": 8};
+    let total= 0;
+    for (let q in prices){
+        total += prices[q]*quantity[q];
+    };
+    return total;
+};
 
 product_benchy.addEventListener("click", function(){
     name_text.innerText = "Benchy";
@@ -80,8 +92,7 @@ minus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-        total -= (quantity[key]*price);
-        total_text.innerHTML = total.toString();
+        total_text.innerHTML = count_total();
     }
 });
 plus_button.addEventListener("click", function(){
@@ -92,14 +103,13 @@ plus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-        total += (quantity[key]*price);
-        total_text.innerHTML = total.toString();
+        total_text.innerHTML = count_total();
     }
 });
 tg.onEvent("mainButtonClicked", function(){
-    let string = ""
+    let string = "";
     for (let x in quantity){
-        string += `${x}: ${quantity[x]},`
-    }
+        string += `${x}: ${quantity[x]},`;
+    };
     tg.sendData(string);
 });
