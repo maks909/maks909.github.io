@@ -80,7 +80,7 @@ minus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-        tatal -= (quantity[key]*price).toString();
+        total -= (quantity[key]*price).toString();
         total_text.innerHTML = total.toString();
     }
 });
@@ -92,7 +92,7 @@ plus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-        tatal += (quantity[key]*price).toString();
+        total += (quantity[key]*price).toString();
         total_text.innerHTML = total.toString();
     }
 });
