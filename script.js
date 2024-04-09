@@ -2,7 +2,7 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-tg.MainButton.text = "Changed Text";
+tg.MainButton.text = "Pay";
 tg.MainButton.setText("ChangedText1");
 tg.MainButton.textColor = "#000000";
 tg.MainButton.color = "#FF8800";
@@ -92,7 +92,7 @@ minus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-        total_text.innerHTML = count_total();
+        total_text.innerHTML = (count_total()).toString()+"zł";
     }
 });
 plus_button.addEventListener("click", function(){
@@ -103,7 +103,7 @@ plus_button.addEventListener("click", function(){
         console.log(key);
         quantity_text.innerHTML = quantity[key].toString() + "x";
         price_text.innerHTML = (quantity[key]*price).toString() + "zł";
-        total_text.innerHTML = count_total();
+        total_text.innerHTML = (count_total()).toString()+"zł";
     }
 });
 tg.onEvent("mainButtonClicked", function(){
